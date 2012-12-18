@@ -1162,8 +1162,7 @@ NSString * const AQGridViewSelectionDidChangeNotification = @"AQGridViewSelectio
 	_selectedIndex = index;
 	[[self cellForItemAtIndex: index] setSelected: YES animated: animated];
 	
-	if ( position != AQGridViewScrollPositionNone )
-		[self scrollToItemAtIndex: index atScrollPosition: position animated: animated];
+	[self scrollToItemAtIndex: index atScrollPosition: position animated: animated];
 	
 	if ( notifyDelegate )
 	{
